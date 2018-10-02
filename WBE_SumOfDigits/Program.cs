@@ -42,15 +42,16 @@ namespace WBE_SumOfDigits
             } while (true);
         }
 
-        static int SumOfDigits(int umber)
+        static int SumOfDigits(int number)
         {
-            int sum = 0;
-            do
+            if (number != 0)
             {
-                sum += umber % 10;
-                umber /= 10;
-            } while (umber !=0);
-            return sum;
+                return number % 10 + SumOfDigits(number / 10);
+            }
+            else
+            {
+                return number;
+            }
         }
     }
 }
