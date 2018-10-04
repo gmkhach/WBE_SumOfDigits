@@ -44,14 +44,7 @@ namespace WBE_SumOfDigits
 
         static int SumOfDigits(int number)
         {
-            if (number != 0)
-            {
-                return number % 10 + SumOfDigits(number / 10);
-            }
-            else
-            {
-                return number;
-            }
+            return number != 0?  number % 10 + SumOfDigits(number / 10) : number;
         }
     }
 }
