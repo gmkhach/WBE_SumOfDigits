@@ -1,7 +1,7 @@
 ﻿/*
  * Write a method that takes a number and returns the sum of all of its integers.
- */ 
- 
+ */
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,22 +29,21 @@ namespace WBE_SumOfDigits
                         Console.Clear();
                         throw new Exception("Invalid Entry!");
                     }
-                    Console.Write("\nPress Enter to try a different number...");
-                    Console.ReadLine();
-                    Console.Clear();
                 }
                 catch (Exception ex)
                 {
                     Console.Clear();
                     Console.WriteLine(ex.Message);
                 }
-
+                Console.Write("\nPress Enter to try a different number...");
+                Console.ReadLine();
+                Console.Clear();
             } while (true);
         }
 
         static int SumOfDigits(int number)
         {
-            return number != 0?  number % 10 + SumOfDigits(number / 10) : number;
+            return number != 0 ? number % 10 + SumOfDigits(number / 10) : number;
         }
     }
 }
